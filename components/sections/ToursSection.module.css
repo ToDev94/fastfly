@@ -1,0 +1,31 @@
+.tours__section {
+  display: flex;
+  align-items: center;
+  background-color: var(--veryLightOrange);
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  min-height: 100dvh;
+}
+
+.secondary-heading {
+  color: #444;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.section__text {
+  font-size: 1.6rem;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.tour__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 13rem;
+}

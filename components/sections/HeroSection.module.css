@@ -1,0 +1,48 @@
+.hero-section {
+  display: flex;
+
+  flex-direction: column;
+  background-color: var(--primaryPurple);
+  background-image: url("/imgs/traveller.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 80dvh;
+}
+
+.primary-heading {
+  color: white;
+  font-size: 6.4rem;
+}
+
+.secondary-heading {
+  color: white;
+  font-size: 3.6rem;
+}
+
+.hero-content {
+  flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  /* padding-top: 15rem; */
+}
+
+.hero-text {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 52em) {
+  .primary-heading {
+    font-size: 3.6rem;
+  }
+  .secondary-heading {
+    font-size: 2rem;
+  }
+}

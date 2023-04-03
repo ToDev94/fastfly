@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&display=swap");
+
+:root {
+  --primaryPurple: #3a1f5d;
+  --lightPurple: #614c7d;
+  --darkOrange: #ffd342;
+  --lightOrange: #ffde70;
+  --veryLightOrange: #f3edd8;
+  --darkGray: #1e1e1e;
+  --lightGray: #555;
+  --veryLightGray: #eee;
+  --sucess: #349e03;
+  --pending: #c59500;
+  --faild: #bc0000;
+
+  --minWidthMedium: 60em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html,
+body {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+
+  width: 100vw;
+  font-size: 62.5%;
+  font-family: "Changa", sans-serif;
+  position: relative;
+}
+
+.primary-heading {
+  color: #ddd;
+  font-size: 6.4rem;
+}
+
+.secondary-heading {
+  color: #ddd;
+  font-size: 3.6rem;
+}

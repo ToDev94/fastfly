@@ -1,0 +1,19 @@
+.inputElement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.inputElement input,
+.inputElement textarea {
+  width: 100%;
+  border-radius: 3px;
+  height: 3.5rem;
+  resize: none;
+  border: 2px solid #99999980;
+  padding: 1rem;
+}
+
+.inputElement input:focus,
+.inputElement textarea:focus {
+  outline: 2px solid rgba(185, 103, 239, 0.94);
+}

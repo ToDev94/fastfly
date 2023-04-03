@@ -1,0 +1,19 @@
+.cta-btn:link,
+.cta-btn:visited {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  color: var(--darkPurple);
+  background-color: var(--darkOrange);
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+  background-color: var(--lightOrange);
+}

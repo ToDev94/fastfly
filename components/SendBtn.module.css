@@ -1,0 +1,23 @@
+.send-btn {
+  flex-grow: 0;
+  border: none;
+  background-color: var(--primaryPurple);
+  border-radius: 3px;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: white;
+
+  padding: 1rem 2rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.send-btn:hover {
+  cursor: pointer;
+}
+.send-btn:active {
+  background-color: var(--lightPurple);
+  cursor: pointer;
+}

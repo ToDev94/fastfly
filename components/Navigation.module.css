@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.logo {
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  color: white;
+  font-size: 3.2rem;
+}
+
+.navigation {
+  padding: 3rem 4rem;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Drawer__Container {
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: orange;
+  transition: all 0.3s ease-in-out;
+  transform: translate(100vw);
+  position: absolute;
+
+  z-index: 2;
+}
+.Drawer__Container--isOpen {
+  transform: translate(0);
+}
+
+.drawer--btn {
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: xx-large;
+}
+
+.drawer__content {
+  padding: 2rem;
+}
+
+.drawer__header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 54em) {
+  .nav-items {
+    display: none;
+  }
+  .drawer--btn {
+    visibility: visible;
+  }
+}
