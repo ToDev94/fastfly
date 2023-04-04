@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.section {
+  background-color: var(--primaryPurple);
+}
+
+.upper-footer {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5rem;
+}
+.divider {
+  border: 2px solid rgba(190, 190, 190, 0.097);
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  color: #ddd;
+  font-size: 3.2rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+  flex-grow: 1;
+
+  font-size: 1.2rem;
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.items ul {
+  color: #ddd;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.items li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.items:nth-of-type(1),
+.items:nth-of-type(2) {
+  border-right: 2px solid rgba(190, 190, 190, 0.097);
+}
+
+.lower-footer {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  color: rgba(255, 255, 255, 0.705);
+  font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 774px) {
+  .items:nth-of-type(2) {
+    border-right: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .items:nth-of-type(1),
+  .items:nth-of-type(2) {
+    border-right: none;
+    border-bottom: 2px solid rgba(190, 190, 190, 0.097);
+  }
+}
