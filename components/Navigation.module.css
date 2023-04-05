@@ -8,9 +8,9 @@
 }
 
 .navigation {
-  padding: 3rem 4rem;
+  padding: 4rem 4rem;
   width: 100vw;
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   height: 7rem;
@@ -20,8 +20,9 @@
 
 .nav-items {
   display: flex;
+
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .Drawer__Container {

@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef, useState, useEffect } from "react";
 import Container from "../Container";
 import Partners from "../Partners";
 import DiscoverMoreBtn from "../DiscoverMoreBtn";
@@ -7,10 +8,15 @@ import { FiChevronDown } from "react-icons/fi";
 import Navigation from "../Navigation";
 
 const HeroSection = () => {
+  const [containerRef, isVisible] = useElementOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  });
   return (
     <>
-      <section className={classes["hero-section"]}>
-        <Navigation />
+      <section ref={containerRef} className={classes["hero-section"]}>
+        <Navigation isVisible={isVisible} />
 
         <div className={classes["hero-content"]}>
           <div className={classes["hero-text"]}>
@@ -32,3 +38,23 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+const useElementOnScreen = (options) => {
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const callbackFunction = (entries) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => {
+      if (containerRef.current) observer.unobserve(containerRef.current);
+    };
+  }, [containerRef, options]);
+  return [containerRef, isVisible];
+};

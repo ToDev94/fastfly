@@ -5,6 +5,7 @@ import classes from "./Navigation.module.css";
 import NavItem from "./NavItem";
 import CTABtn from "./CTABtn";
 import { FiMail, FiMenu, FiX } from "react-icons/fi";
+import { forwardRef } from "react";
 
 const navItems = [
   { key: 1, text: "الرحلات" },
@@ -12,9 +13,13 @@ const navItems = [
   { key: 3, text: "إكتشف معنا" },
 ];
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const { isVisible } = props;
+  const styles = !isVisible
+    ? { backgroundColor: "#2b1745ee", position: "fixed" }
+    : {};
   return (
-    <nav className={classes.navigation}>
+    <nav style={styles} className={classes.navigation}>
       <Link href="#" className={classes.logo}>
         FastFly
       </Link>
