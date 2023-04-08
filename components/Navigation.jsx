@@ -33,7 +33,7 @@ const Navigation = (props) => {
   return (
     <nav style={styles} className={classes.navigation}>
       <Link href="#" className={classes.logo}>
-        FastFly
+        Fastfly
       </Link>
       <SmallViewNav /> <LargeViewNav />
     </nav>
