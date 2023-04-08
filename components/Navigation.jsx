@@ -13,6 +13,18 @@ const navItems = [
   { key: 3, text: "إكتشف معنا" },
 ];
 
+const NavContent = () => {
+  return (
+    <>
+      {navItems.map((item, i) => (
+        <li key={item.key}>
+          <NavItem> {item.text} </NavItem>
+        </li>
+      ))}
+    </>
+  );
+};
+
 const Navigation = (props) => {
   const { isVisible } = props;
   const styles = !isVisible
@@ -34,11 +46,7 @@ const LargeViewNav = () => {
   return (
     <div className={classes["nav-items"]}>
       <ul className={classes["nav-items"]}>
-        {navItems.map((item, i) => (
-          <li key={item.key}>
-            <NavItem> {item.text} </NavItem>
-          </li>
-        ))}
+        <NavContent />
       </ul>
       <CTABtn>
         <FiMail /> إتصل بنا
@@ -63,6 +71,14 @@ const SmallViewNav = ({ isVisible }) => {
         <div className={classes["drawer__content"]}>
           <div className={classes["drawer__header"]}>
             <DrawerBtn isOpen onClick={HandleClick} />
+          </div>
+          <div className={classes["small-nav--content"]}>
+            <ul className={classes["small-nav--items"]}>
+              <NavContent />
+            </ul>
+            <CTABtn>
+              <FiMail /> إتصل بنا
+            </CTABtn>
           </div>
         </div>
       </div>
