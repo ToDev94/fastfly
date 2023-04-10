@@ -4,7 +4,7 @@ import Container from "../Container";
 
 const DiscoverSection = () => {
   return (
-    <section className={classes.section}>
+    <section id="discover" className={classes.section}>
       <div className={classes["img-bg"]}>
         <h2 className={`secondary-heading ${classes["secondary-heading"]}`}>
           إكتشف معنا جنة الصحراء

@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 
 const ClientsSection = () => {
   return (
-    <section className={classes.section}>
+    <section id="clients" className={classes.section}>
       <div className={classes.testimonials}>
         <Container maxWidth="100rem">
           <h1> فاست فلاي ستشعل فيك روح الشباب و المغامرة </h1>

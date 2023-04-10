@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const ContactUs = () => {
   return (
-    <div className={classes.section}>
+    <section id="contactus" className={classes.section}>
       <Container maxWidth="100rem">
         <div className={classes["flex-container"]}>
           <div className={classes.inputs}>
@@ -55,7 +55,7 @@ const ContactUs = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

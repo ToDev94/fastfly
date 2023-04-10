@@ -5,20 +5,19 @@ import classes from "./Navigation.module.css";
 import NavItem from "./NavItem";
 import CTABtn from "./CTABtn";
 import { FiMail, FiMenu, FiX } from "react-icons/fi";
-import { forwardRef } from "react";
 
 const navItems = [
-  { key: 1, text: "الرحلات" },
-  { key: 2, text: "عملائنا" },
-  { key: 3, text: "إكتشف معنا" },
+  { key: 1, text: "الرحلات", href: "#tours" },
+  { key: 2, text: "عملائنا", href: "#clients" },
+  { key: 3, text: "إكتشف معنا", href: "#discover" },
 ];
 
 const NavContent = () => {
   return (
     <>
-      {navItems.map((item, i) => (
+      {navItems.map((item) => (
         <li key={item.key}>
-          <NavItem> {item.text} </NavItem>
+          <NavItem href={item.href}> {item.text} </NavItem>
         </li>
       ))}
     </>
@@ -32,7 +31,7 @@ const Navigation = (props) => {
     : {};
   return (
     <nav style={styles} className={classes.navigation}>
-      <Link href="#" className={classes.logo}>
+      <Link href="#hero" scroll={false} className={classes.logo}>
         Fastfly
       </Link>
       <SmallViewNav /> <LargeViewNav />

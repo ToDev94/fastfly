@@ -16,7 +16,7 @@ const FooterSection = () => {
     <section className={classes.section}>
       <div className={classes["upper-footer"]}>
         <div className={classes.items}>
-          <Link href="#" className={classes.logo}>
+          <Link href="#hero" scroll={false} className={classes.logo}>
             Fastfly
           </Link>
         </div>

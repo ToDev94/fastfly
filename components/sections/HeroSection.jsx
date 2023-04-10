@@ -15,7 +15,7 @@ const HeroSection = () => {
   });
   return (
     <>
-      <section ref={containerRef} className={classes["hero-section"]}>
+      <section id="hero" ref={containerRef} className={classes["hero-section"]}>
         <Navigation isVisible={isVisible} />
 
         <div className={classes["hero-content"]}>

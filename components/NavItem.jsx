@@ -1,11 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
-import classes from "./NavItem.module.css"
+import React from "react";
+import Link from "next/link";
+import classes from "./NavItem.module.css";
 
-const NavItem = ({children}) => {
+const NavItem = ({ children, href }) => {
+  const linkString = href || "#";
   return (
-    <Link href="#" className={classes["nav-item"]} > {children} </Link>
-  )
-}
+    <Link href={linkString} scroll={false} className={classes["nav-item"]}>
+      {children}
+    </Link>
+  );
+};
 
-export default NavItem
+export default NavItem;

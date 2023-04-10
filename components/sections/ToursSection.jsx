@@ -9,7 +9,7 @@ import dubai from "../../public/imgs/cards-img/dubai.jpg";
 import Card from "../Card";
 const ToursSection = () => {
   return (
-    <section className={classes["tours__section"]}>
+    <section id="tours" className={classes["tours__section"]}>
       <Container>
         <h2 className={`secondary-heading ${classes["secondary-heading"]}`}>
           رحلاتنا المبرمجة
